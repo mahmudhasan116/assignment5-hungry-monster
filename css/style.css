@@ -1,0 +1,242 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 1;
+    padding: 1;
+}
+
+input:focus,
+button:focus {
+    outline: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.img-cover-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.navbar {
+    padding: 15px 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__item {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar__logo {
+    height: 60px;
+}
+
+.navbar__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navbar__link {
+    color: #272525;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* Search Box */
+.meal__search--box {
+    width: 100%;
+    max-width: 600px;
+    margin: 25px auto 40px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+
+.meal__search--input {
+    border: none;
+    background: #f2f8f8;
+    padding: 18px 18px 18px 50px;
+    width: calc(100% - 100px);
+}
+
+.meal__search--box::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 15px;
+    width: 24px;
+    height: 24px;
+    background: url(../img/search.png) no-repeat center center / contain;
+    z-index: 1;
+}
+
+.meal__search--input::placeholder {
+    color: #5e5e5e;
+}
+
+.meal__search {
+    background: #4ef0da;
+    border: 0;
+    width: 100px;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 15px 20px;
+}
+
+
+/* Cards */
+.meal__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+
+.meal__card {
+    border-radius: 5px;
+    background: #f6fbfb;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.meal__img--box {
+    height: 220px;
+}
+
+.meal__content {
+    padding: 20px 15px;
+}
+
+.meal__title {
+    text-align: center;
+    color: #272525;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+/* Not Found Message */
+.meal__not--found {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4ee2f0;
+}
+
+
+/* Meal Description Card */
+.meal__description--box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(5px);
+    z-index: 9;
+    padding: 25px 0;
+    opacity: 0;
+    transition: .1s;
+    visibility: hidden;
+}
+
+.meal__description {
+    max-width: 580px;
+    width: 95%;
+    background: #fff;
+    border-radius: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.meal__description--img-box {
+    height: 320px;
+}
+
+.meal__description::-webkit-scrollbar {
+    background: #f0f0f0;
+    width: 10px;
+    border-radius: 10px;
+}
+
+.meal__description::-webkit-scrollbar-thumb {
+    background: linear-gradient(#3df3d5, #58eef3);
+    border-radius: 10px;
+}
+
+
+.meal__description--close {
+    border: 0;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #ffffff79;
+    backdrop-filter: blur(5px);
+    font-size: 45px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #4eddf0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+}
+
+.meal__description--content {
+    padding: 30px 20px;
+}
+
+.meal__description--title {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.meal__description--subtitle {
+    margin: 25px 0 20px;
+}
+
+.meal__description--item {
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    color: #6C6C6C;
+}
+
+.meal__description--item::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: url(../img/tick.png) no-repeat center center / contain;
+}
+
+@media screen and (max-width: 1200px){
+    .meal__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .meal__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .meal__cards {
+        grid-template-columns: 1fr;
+    }
+}

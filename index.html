@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Monster</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <div class="navbar__logo--box">
+                <img src="img/logo.png" alt="Hungry Monster" class="navbar__logo">
+            </div>
+            <nav class="navbar__nav">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">About</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Recipes</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="meals">
+            <div class="container">
+                <!-- Search Meal -->
+                <div class="meal__search--box">
+                    <input type="text" class="meal__search--input" placeholder="Search for a Meal...">
+                    <button id="meal__search" class="meal__search">Search</button>
+                </div>
+                <!-- Meal Content -->
+                <div class="meal__inner">
+                    <div class="meal__cards">
+                        
+                    </div>
+
+                    <h2 class="meal__not--found"></h2>
+
+                    <div class="meal__description--box">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JS -->
+    <script src="js/hungry-monster.js"></script>
+</body>
+
+</html>
